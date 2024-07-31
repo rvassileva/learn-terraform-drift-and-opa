@@ -1,8 +1,5 @@
-policy "friday_deploys_advisory" {
+policy "friday_deploys" {
   enforcement_level = "advisory"
-}
-
-source "friday_deploys_advisory" {
-  path = "../policies/friday_deploys.rego"
   query = "data.terraform.policies.friday_deploys.deny"
+  path  = "../policies/friday_deploys.rego"
 }

@@ -1,8 +1,5 @@
-policy "friday_deploys_mandatory" {
+policy "friday_deploys" {
   enforcement_level = "mandatory"
-}
-
-source "friday_deploys_mandatory" {
-  path = "../policies/friday_deploys.rego"
   query = "data.terraform.policies.friday_deploys.deny"
+  path  = "../policies/friday_deploys.rego"
 }
